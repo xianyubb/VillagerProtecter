@@ -193,7 +193,7 @@ LL_AUTO_TYPE_INSTANCE_HOOK(
 ) {
     if ((actor.isType(ActorType::Villager) || actor.isType(ActorType::VillagerV2)
          || actor.isType(ActorType::VillagerBase))
-        && this->getSelectedItem().getTypeName() == config.item && this->isSneaking() == true) {
+        && this->getSelectedItem().getTypeName() == "" && this->isSneaking() == true) {
         SendForm(*this, actor);
         return false;
     }
